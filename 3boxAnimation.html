@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.container{
+  display:table;
+  clear:both;
+}
+.container div{
+  width: 200px;
+  height: 400px;
+  line-height: 400px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+  text-align: center;
+  border: 2px solid black;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+#a1{
+  animation-name: box1;
+  left:0px;
+  top:0px;
+}
+#a2 {
+  line-height: 370px;
+  left: 200px;
+  top:0px;
+  background-color: white;
+  color: black;
+}
+#a3 {
+  animation-name: box3;
+  left:400px;
+  top:0px;
+}
+p {
+  line height: 0;
+  animation: text2 4s infinite;
+}
+
+
+@keyframes box1 {
+  50%  {background-color:yellow;
+  		color: black;}
+}
+@keyframes box3 {
+  33%  {line-height: 200px;
+  		color: white;}
+  66%  {line-height: 400px;
+  		color: black;}
+  100%  {line-height: 600px;
+  		color: white;}
+}
+@keyframes text2 {
+  100% {transform: rotate(360deg);}
+}
+</style>
+</head>
+<body>
+
+<div class=container>
+  <div id=a1><b>ONE</b></div>
+  <div id=a2><p><b>TWO</b></p></div>
+  <div id=a3><b>THREE</b></div>
+</div>
+
+
+</body>
+</html>
